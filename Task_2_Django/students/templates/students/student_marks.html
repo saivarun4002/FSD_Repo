@@ -1,0 +1,8 @@
+<!-- students/templates/students/student_marks.html -->
+
+<h2>Student Marks</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
