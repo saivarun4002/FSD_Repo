@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+}
+
+.character-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: black;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.description {
+    flex: 1;
+    padding-right: 30px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.description h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: white;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.character-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}

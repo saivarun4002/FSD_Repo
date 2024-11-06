@@ -1,0 +1,154 @@
+/* General body and html settings */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ccc;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-top: 60px; 
+    border: 4px solid black; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7); 
+    border-radius: 10px; 
+    padding: 20px; 
+    background-color: white; 
+}
+
+/* Slider styles */
+.slider {
+    width: 90%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    box-sizing: border-box;
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.slide:nth-child(1) {
+    animation: slideAnimation 9s infinite;
+}
+
+.slide:nth-child(2) {
+    animation: slideAnimation 9s infinite;
+    animation-delay: 3s;
+}
+
+.slide:nth-child(3) {
+    animation: slideAnimation 9s infinite;
+    animation-delay: 6s;
+}
+
+/* Character Cards Section */
+.character-cards {
+    background-color: black; 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px; 
+    margin: 50px auto; 
+    padding: 0 50px; 
+}
+
+.character-card {
+    background-color: #000; 
+    width: 100%; 
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7); 
+    overflow: hidden;
+    padding: 15px;
+    border: 2px solid white; 
+}
+
+.character-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white; 
+}
+
+.character-card p {
+    margin-top: 10px;
+    color: white; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.character-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); 
+}
